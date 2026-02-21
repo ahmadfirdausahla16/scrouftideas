@@ -112,3 +112,32 @@ kids.addEventListener('touchend', () => {
   scrollAmount = kids.scrollLeft; // Update posisi terakhir agar tidak loncat
   isPaused = false;
 });
+
+// --- LOGIKA SLIDER PROMO ---
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+
+function showSlide(index) {
+  // Validasi jika element tidak ditemukan agar tidak error
+  if (slides.length === 0) return;
+
+  // Hapus semua class active
+  slides.forEach(s => s.classList.remove('active'));
+  dots.forEach(d => d.classList.remove('active'));
+
+  // Tambah class active ke index yang dituju
+  slides[index].classList.add('active');
+  dots[index].classList.add('active');
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Jalankan otomatis setiap 3 detik
+// Tambahkan pengecekan agar setInterval hanya jalan jika ada slide
+if (slides.length > 0) {
+  setInterval(nextSlide, 3000);
+}
