@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kids Fashion</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<header class="navbar">
+  <div class="logo">scrouft<span>ideas.</span></div>
+  <div class="logo">scrouft<span>ideas.</span></div>
+  <div class="logo">scrouft<span>ideas.</span></div>
+</header>
+
+<section class="hero fade">
+  <h1>
+    <span class="highlight">Seni</span> yang Bisa Kamu Pakai
+  </h1>
+
+  <p class="sub">
+    Buat Perhiasan Exclusive<br> Mu Sendiri
+  </p>
+
+  <button class="btn-primary" onclick="openModal()">Buat Sekarang</button>
+
+</section>
+<section class="kids fade">
+  <div class="kids-track">
+    <div class="kid-card pink">
+      <img src="assets/gelang.jpeg" alt="Gelang">
+    </div>
+    <div class="kid-card yellow">
+      <img src="assets/kalung.jpeg" alt="Kalung">
+    </div>
+    <div class="kid-card orange">
+      <img src="assets/jam.jpeg" alt="Jam">
+    </div>
+    <div class="kid-card peach">
+      <img src="assets/sabuk.jpeg" alt="Sabuk">
+    </div>
+  </div>
+</section>
+
+<section class="style fade">
+  <h2>Ide Kreatif di Setiap Detilnya,<br><span class="highlight">#tampilunik</span></h2>
+</section>
+
+<section class="features fade">
+
+  <div class="feature green">
+    <div class="icon">
+      <i class="fa-solid fa-gem"></i>
+    </div>
+    <p>Temui keunikan mu disini, buat perhiasan yang hanya milikmu saja.</p>
+  </div>
+
+  <div class="feature coral">
+    <div class="icon">
+      <i class="fa-solid fa-star"></i>
+    </div>
+    <p>Buat orang-orang mudah <br>mengingatmu.</p>
+  </div>
+
+  <div class="feature blue">
+    <div class="icon">
+      <i class="fa-solid fa-heart"></i>
+    </div>
+    <p>Buat perhiasan couple unik dengan pasanganmu.</p>
+  </div>
+
+</section>
+
+<section class="collections fade">
+  <h2>
+    Temukan <span class="highlight">keunikanmu</span> di dalam katalog kami.
+  </h2>
+
+  <div class="collections-grid">
+    <div class="promo-card promo-cover">
+  <!-- Gambar 1 -->
+  <div class="slide active" style="background-image: url('assets/promo.jpg');"></div>
+  <!-- Gambar 2 -->
+  <div class="slide" style="background-image: url('assets/promo2.jpg');"></div>
+
+  <!-- Tombol (Tetap di luar div slide agar tidak ikut hilang saat transisi) -->
+  <button class="promo-btn" onclick="openModal()">Pesan</button>
+
+  <!-- Indikator Bulat -->
+  <div class="slider-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+  </div>
+</div>
+
+    <!-- Product Cards -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="assets/gelang.jpeg" alt="">
+      </div>
+      <div class="product-body">
+        <h4>Gelang Custom <br>(Solo/Couple)</h4>
+        <p>Mulai Rp10k</p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">
+        <img src="assets/kalung.jpeg" alt="">
+      </div>
+      <div class="product-body">
+        <h4>Kalung Custom <br>(Solo/Couple)</h4>
+        <p>Mulai Rp10k</p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">
+        <img src="assets/jam.jpeg" alt="">
+      </div>
+      <div class="product-body">
+        <h4>Jam Custom <br>(Solo/Couple)</h4>
+        <p>Mulai Rp50k</p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">
+        <img src="assets/sabuk.jpeg" alt="">
+      </div>
+      <div class="product-body">
+        <h4>Sabuk Custom <br>(Solo/Couple)</h4>
+        <p>Mulai Rp50k</p>
+      </div>
+    </div>
+
+    <!-- Highlight Card -->
+    <div class="highlight-card">
+      <h3>Pesan 2 Perhiasan Couple Custom</h3>
+      <p>Gratis 1 Gelang/Kalung Couple Template</p>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">
+        <img src="assets/tas.jpeg" alt="">
+      </div>
+      <div class="product-body">
+        <h4>Tas Custom <br>(Solo/Couple)</h4>
+        <p>Mulai Rp100k</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="why fade">
+  <div class="why-frame">
+    <div class="why-img">
+      <img src="assets/sc.png" alt="Scrouftideas Store">
+    </div>
+  </div>
+
+  <div class="why-text">
+    <h2>
+      Kenapa Harus Memilih<br>
+      <span>Scrouftideas?</span>
+    </h2>
+
+    <ul class="why-list">
+      <li>
+        <span class="icon sparkle"></span>
+        <div>
+          <b>100% Buatan Tangan</b>
+          <small>Dibuat manual dengan detail & cinta</small>
+        </div>
+      </li>
+
+      <li>
+        <span class="icon diamond"></span>
+        <div>
+          <b>Exclusive Punyamu</b>
+          <small>Tidak pasaran, sesuai identitasmu</small>
+        </div>
+      </li>
+
+      <li>
+        <span class="icon leaf"></span>
+        <div>
+          <b>Ramah Lingkungan</b>
+          <small>Material dipilih dengan sadar</small>
+        </div>
+      </li>
+
+      <li>
+        <span class="icon palette"></span>
+        <div>
+          <b>Custom Identitas</b>
+          <small>Bisa request warna & konsep</small>
+        </div>
+      </li>
+    </ul>
+
+    <p class="why-note">✦ Bonus: konsultasi desain gratis sebelum produksi</p>
+  </div>
+</section>
+<section class="testimonials fade">
+  <h2>
+    Apa yang <span>Pencinta</span> Perhiasan<br>
+    Telah <span>Katakan!</span>
+  </h2>
+
+  <div class="testimonial-grid">
+    <div class="testimonial">
+      <div class="user">
+        <img src="assets/ahla.jpg">
+        <div>
+          <strong>Ahmad Firdausy Ahla</strong>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+      <p>
+        menurutku ngga ada yang bisa se perfect ini dalam mengeksekusi ide, imajinasi dan keinginan client. good finishing!
+      </p>
+    </div>
+
+    <div class="testimonial">
+      <div class="user">
+        <img src="assets/sylaa.png">
+        <div>
+          <strong>Syahla Aghniatussyifa</strong>
+          <div class="stars">★★★★</div>
+        </div>
+      </div>
+      <p>
+        Terkesan sih sama hasil yang di kasih ke aku. Berasa keren punya gelang homemade exclusive design sendiri <3
+      </p>
+    </div>
+
+    <div class="testimonial">
+      <div class="user">
+        <img src="assets/syahdan.png">
+        <div>
+          <strong>Syahdan</strong>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+      <p>
+        Bagus jamnya, mau beli lagi kalau udah ada uang
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h3>scrouftideas.</h3>
+      <p>
+        Tampil unik, dengan cantik.
+      </p>
+    </div>
+  </div>
+
+  <!-- <div class="footer-bottom">
+    <p>© 2026 Scrouftideas. All rights reserved.</p>
+  </div> -->
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2>Form Pemesanan</h2>
+      <span class="close" onclick="closeModal()">×</span>
+    </div>
+
+    <form id="orderForm">
+      <input type="text" id="nama" placeholder="Nama kamu" required>
+
+      <select id="produk" required>
+        <option value="">Pilih Produk</option>
+        <option>Gelang</option>
+        <option>Kalung</option>
+        <option>Sabuk</option>
+        <option>Jam Tangan</option>
+        <option>Tas</option>
+      </select>
+
+      <select id="kategori" required>
+        <option value="">Kategori</option>
+        <option>Solo</option>
+        <option>Couple</option>
+      </select>
+
+      <textarea id="catatan" rows="3" placeholder="Catatan tambahan"></textarea>
+
+      <div class="discount">
+        Claim diskon <b>20%</b>
+      </div>
+
+      <div class="note">
+        * Kode tertera pada katalog promo
+      </div>
+
+      <input type="text" id="kode" placeholder="Masukkan kode diskon">
+
+      <button type="submit" class="submit">Kirim ke WhatsApp</button>
+
+      <div class="note">
+        * Discount hangus setelah anda click "Kirim ke WhatsApp", pastikan sudah fix! Transaksi manual setelah pemesanan
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
