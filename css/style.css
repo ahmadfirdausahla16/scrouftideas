@@ -205,17 +205,30 @@ nav a {
 }
 
 /* track */
+.kids {
+  width: 100%;
+  overflow: hidden; /* Ubah jadi hidden agar user tidak manual scroll saat auto-play */
+  white-space: nowrap;
+  position: relative;
+  -webkit-overflow-scrolling: auto; /* Matikan momentum scroll bawaan browser */
+}
+
 .kids-track {
   display: flex;
   gap: 16px;
+  /* Tambahkan ini biar render gambar enteng di HP */
+  will-change: transform;
+  transform: translateZ(0);
 }
 
-/* card */
 .kid-card {
   flex: 0 0 auto;
   width: 275px;
   border-radius: 16px;
   overflow: hidden;
+  /* Tambahkan ini */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .kid-card img {
