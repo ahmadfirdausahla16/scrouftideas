@@ -86,36 +86,29 @@ Diskon: ${diskon}
 });
 
 
-  const kids = document.querySelector('.kids');
-  let scrollAmount = 0;
+const kids = document.querySelector('.kids');
+let scrollAmount = 0;
+let isPaused = false;
 
-  setInterval(() => {
-    scrollAmount += 1;
+function step() {
+  if (!isPaused) {
+    scrollAmount += 0.8; // Angka ini kontrol kecepatan, 0.8 biasanya mulus banget
     kids.scrollLeft = scrollAmount;
 
-    if (kids.scrollLeft + kids.clientWidth >= kids.scrollWidth) {
+    // Kalau sudah sampai ujung, balik ke 0
+    if (kids.scrollLeft >= (kids.scrollWidth - kids.clientWidth)) {
       scrollAmount = 0;
     }
-  }, 30);
-
-  let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.dot');
-
-function showSlide(index) {
-  // Hapus semua class active
-  slides.forEach(s => s.classList.remove('active'));
-  dots.forEach(d => d.classList.remove('active'));
-
-  // Tambah class active ke index yang dituju
-  slides[index].classList.add('active');
-  dots[index].classList.add('active');
+  }
+  requestAnimationFrame(step); // Ini rahasia biar mulus 60fps
 }
 
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-}
+// Jalankan animasi
+requestAnimationFrame(step);
 
-// Jalankan otomatis setiap 3 detik
-setInterval(nextSlide, 3000);
+// Opsional: Berhenti kalau disentuh/hover
+kids.addEventListener('touchstart', () => isPaused = true);
+kids.addEventListener('touchend', () => {
+  scrollAmount = kids.scrollLeft; // Update posisi terakhir agar tidak loncat
+  isPaused = false;
+});
